@@ -1,0 +1,8 @@
+FROM dylanmei/zeppelin:latest
+
+COPY dist/pymichel-0.0.1-py3.7.egg /tmp
+COPY deploy-spark-job.sh /tmp
+RUN chmod 700 /tmp/deploy-spark-job.sh
+
+ENTRYPOINT /tmp/deploy-spark-job.sh 
+RUN /tmp/deploy-spark-job.sh
