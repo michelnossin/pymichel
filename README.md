@@ -1,16 +1,16 @@
 # PyMichel
 
 Basic PySpark project including test and Egg library
-No local Spark is required as we will use Spark.
-The used Docker image uses Spark 2.2, and Python 3.4
+No local Spark is required as we will use Spark provided by Docker.
+The used Docker image has Spark 2.2, and Python 3.4 installed.
 
 # Build and run docker image (from your own pc)
 docker build --no-cache  -t pymichel  -f docker/dockerfile_pymichel /home/michel/git/pymichel
 
-# Optional step below: if you want to develop on your docker environment
+# Optional steps below: if you want to develop on your docker environment
 
 ## For all next steps log in Docker first:
-docker run --rm -it -p 8080:8080 -v /home/michel/git/pymichel:/tmp/pymichel spark /bin/bash
+docker run --rm -it -p 8080:8080 -v /home/michel/git/pymichel:/tmp/pymichel dylanmei/zeppelin:0.7.3 /bin/bash
 
 ## Create the library
 cd /tmp/pymichel
