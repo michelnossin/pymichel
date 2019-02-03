@@ -10,18 +10,19 @@ class TestPyMichel(object):
             ("michel", 1),
             ("piet", 2)
         ]
-        source_df = spark.get_spark().createDataFrame(
+        spark_session = spark.get_spark()
+        source_df = spark_session.createDataFrame(
             source_data,
             ["name", "salary"]
         )
 
-        actual_df = winner_or_loser(source_df)
+        actual_df = app.winner_or_loser(source_df)
 
         expected_data = [
             ("michel", 1, "winner"),
             ("piet", 2, "loser")
         ]
-        expected_df = get_spark().createDataFrame(
+        expected_df = spark_session.createDataFrame(
             expected_data,
             ["name", "salary", "winner_or_loser"]
         )

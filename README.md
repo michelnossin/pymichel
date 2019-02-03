@@ -24,8 +24,8 @@ python setup.py bdist_egg
 <execute any step>
 
 ## To test using Pytest
-pip install pytest 
-pip install pyspark
+pip install pytest (or pytest==4.2.0) 
+pip install pyspark==2.2.0.post0
 python -m pytest tests
 
 ## Submit job
