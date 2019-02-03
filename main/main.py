@@ -18,5 +18,3 @@ if __name__ == "__main__":
     actual_df = winner_or_loser(source_df)
 
     actual_df.show()
-
-    spark.stop()
