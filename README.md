@@ -16,10 +16,12 @@ docker run --rm -it -p 8080:8080 -v /home/michel/git/pymichel:/tmp/pymichel spar
 <execute any step>
 
 # Submit job
+```
 /usr/spark-2.2.0/bin/spark-submit --py-files /tmp/pymichel/dist/pymichel-0.0.1-py3.7.egg /tmp/pymichel/main/main.py
 Or
 chmod 700 /tmp/pymichel/docker/deploy-spark-job.sh
 . /tmp/pymichel/docker/deploy-spark-job.sh
+```
 
 # Deploy via docker
 Not tested yet: 
