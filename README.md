@@ -23,6 +23,11 @@ python setup.py bdist_egg
 /usr/spark-2.2.0/bin/pyspark --py-files /tmp/pymichel/dist/pymichel-0.0.1-py3.4.egg
 <execute any step>
 
+## To test using Pytest
+pip install pytest 
+pip install pyspark
+python -m pytest tests
+
 ## Submit job
 ```
 /usr/spark-2.2.0/bin/spark-submit --py-files /tmp/pymichel/dist/pymichel-0.0.1-py3.4.egg /tmp/pymichel/main/main.py

@@ -1,7 +1,7 @@
 import pytest
 
-from pymichel.spark import get_spark
-from pymichel.app import winner_or_loser
+from pymichel import spark
+from pymichel import app
 
 class TestPyMichel(object):
 
@@ -10,7 +10,7 @@ class TestPyMichel(object):
             ("michel", 1),
             ("piet", 2)
         ]
-        source_df = get_spark().createDataFrame(
+        source_df = spark.get_spark().createDataFrame(
             source_data,
             ["name", "salary"]
         )
